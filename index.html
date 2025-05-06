@@ -32,12 +32,25 @@
             margin: 0;
         }
     </style>
-    <title>Subway Surfers New York | topVAZ</title>
+    <title>Subway Surfers New York | Night Team</title>
     <script src="js/games_lib/ludiAdapter.js" charset="utf-8"></script>
 </head>
 
 <body>
     <div id="og-game-holder"></div>
+
+    <!-- Verificación de carga local -->
+    <script>
+        window.addEventListener("load", function () {
+            if (window.location.href.indexOf("file:") === 0) {
+                alert("Night Team here! Sadly, this file cannot be opened locally. Run a local HTTP server and open it from there. Good day!");
+            } else {
+                console.log("Archive loaded correctly from a website!");
+            }
+        });
+    </script>
+
+    <!-- Scripts del juego -->
     <script src="js/boot.js"></script>
     <script src="/js/main.js"></script>
 </body>
